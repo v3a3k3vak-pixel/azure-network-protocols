@@ -30,22 +30,26 @@ Welcome to my tutorial on Network Security Groups and Inspecting Network Protoco
 </p>
 <br />
 <p>
-<img src="https://i.imgur.com/IIUShxp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1500" height="857" alt="Screenshot 2026-11-09 005320" src="https://github.com/user-attachments/assets/bbb7103d-b1c0-4050-9f9b-f9516aa075c2" />
+
 </p>
 <p>
 We can inspect each individual packet and see the actual data that is being sent in each ping. the picture below demonstrates just that. 
 </p>
 <br />
 <p>
-<img src="https://i.imgur.com/GLxSIG3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1631" height="411" alt="Screenshot 2026-11-09 005751" src="https://github.com/user-attachments/assets/642a5983-b9de-4abb-b2e8-1bbaaabbfcfb" />
+
 </p>
 <p>
 In the next portion of the lab we will perpetually ping the Linux machine with the command ping -t. This will continually ping the machine until we decide to stop it, while the Windows machine is pinging the Linux machine we will go to the Linux machine and block inbound ICMP traffic on it's firewall. Once we do that we will stop recieving echo replys from the Linux machine. We will block ICMP by creating a new Network Security Group on the Linux machine that will be set to block ICMP. We can allow the traffic by allowing ICMP on the Linux Network Security Groups page on Azure. 
 </p>
 <br />
-<img src="https://i.imgur.com/5vXO75R.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1407" height="836" alt="Screenshot 2026-11-09 011435" src="https://github.com/user-attachments/assets/192f6906-af26-4409-b106-b97a661a6ef4" />
+
 </p>
-<img src="https://i.imgur.com/Asl80tN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1586" height="447" alt="Screenshot 2026-11-09 011217" src="https://github.com/user-attachments/assets/408b2ec6-5058-405e-b3f0-f2d1f75944e2" />
+
 <p>
 Next we will use our Windows machine to SSH to the Linux machine. SSH has no GUI it just gives the user access to the machines CLI. We will set the wireshark filter to capture SSH packets only. When we ssh into the Linux machine with the command prompt "ssh labuser@10.0.0.5" we can see that wireshark starts to immediately capture SSH packets.
 </p>
