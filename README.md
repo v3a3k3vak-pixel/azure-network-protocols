@@ -54,24 +54,28 @@ In the next portion of the lab we will perpetually ping the Linux machine with t
 Next we will use our Windows machine to SSH to the Linux machine. SSH has no GUI it just gives the user access to the machines CLI. We will set the wireshark filter to capture SSH packets only. When we ssh into the Linux machine with the command prompt "ssh labuser@10.0.0.5" we can see that wireshark starts to immediately capture SSH packets.
 </p>
 <br />
-<img src="https://i.imgur.com/zteR41r.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1503" height="883" alt="Screenshot 2026-11-09 160133" src="https://github.com/user-attachments/assets/b1a1e41b-f35b-4a79-a858-8a9c2d1c7df2" />
+
 </p>
 <p>
 Now we will use wireshark to filter for DHCP. DHCP is the Dynamic Host Configuration Protocol this works on ports 67/68. It is used to assign IP addresses to machines. We will request a new ip address with the command "ipconfig /renew". Once we enter the command wireshark will capture DHCP traffic.
 </p>
 <br />
-<img src="https://i.imgur.com/vU8fpQf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1442" height="850" alt="Screenshot 2026-11-09 163416" src="https://github.com/user-attachments/assets/c08f4418-fd7e-4f85-b64f-3141d2943a91" />
+
 </p>
 <p>
 Time to filter DNS traffic. We will set wireshark to filter DNS traffic. We will initiate DNS traffic by typing in the command "nslookup www.google.com" this command essentially asks our DNS server what is google's IP address.
 </p>
 <br />
-<img src="https://i.imgur.com/VMcwmsO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1602" height="886" alt="Screenshot 2026-11-09 163933" src="https://github.com/user-attachments/assets/700fae0a-a140-4856-8cc9-a95feb9cd471" />
+
 </p>
 <p>
 Lastly we will filter for RDP traffic. When we enter tcp.port==3389 traffic is spammed non stop because we are using Remote Desktop Protocol to connect to our Virtual Machine. 
 </p>
 <br />
-<img src="https://i.imgur.com/VxXGv6X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1617" height="938" alt="Screenshot 2026-11-09 164322" src="https://github.com/user-attachments/assets/b8cbcdc5-226c-47bc-8d43-71629b3ea399" />
+
 </p>
 <p>
